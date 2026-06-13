@@ -4,6 +4,12 @@ Streamlit UI for the AI-Powered Document Summarization System.
 """
 
 import streamlit as st
+import nltk
+
+nltk.download("punkt")
+nltk.download("punkt_tab")
+nltk.download("stopwords")
+
 from preprocessing import preprocess_text
 from summarizer import generate_summary
 from analytics import get_word_frequencies, get_top_keywords, get_sentence_importance
